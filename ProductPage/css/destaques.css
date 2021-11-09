@@ -1,0 +1,47 @@
+:root {
+    --bg-color:#F2E1AC;
+}
+
+.destaques {
+    display: flex;
+    justify-content: center;
+    background: var(--bg-color);
+}
+
+.destaques h1 {
+    font-size: 3em;
+    margin-top: 30px;
+    left: -2;
+    color: rgba(0, 0, 0, 0.65)
+}
+
+.destaques .banner {
+    margin-top: 150px;
+    margin-bottom: 40px;
+    width: 40vw;
+    max-width: 800px;
+    display: flex;
+}
+
+.destaques .banner img {
+    width: 200px;
+    height: auto;
+}
+
+.destaques .banner p {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+@media (max-width: 480px) {
+
+
+    .destaques {
+        display: block;
+        height: 100vh;
+    }
+    .destaques h1{
+        margin: auto;
+        padding: 15px 0 0 10px;
+    }
+}

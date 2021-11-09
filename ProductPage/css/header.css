@@ -1,0 +1,71 @@
+:root {
+    font-family: 'Space Mono', monospace;
+    --main-color: #F2E1AC;
+    --accent-color: #812F33;
+}
+
+html, body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative
+  }
+
+body::-webkit-scrollbar { 
+    display: block;
+  width: 0.5em;
+  overflow: auto;
+  height: 2em;
+  background: var(--accent-color);
+  color: black;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: end;
+    background: var(--main-color);
+    font-weight: 200;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.cabecalho a {
+    color: rgba(83, 83, 83, 0.8);
+    position: relative;
+    margin: 10px 30px;
+    text-decoration: none;
+}
+
+.cabecalho a::after {
+    position: absolute;
+    content: '';
+    bottom: -10%;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: var(--accent-color);
+    transition: all 0.5s ease;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 200ms ease-in ;
+
+}
+
+.cabecalho a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+@media (max-width:480px) {
+    .cabecalho {
+        display: flex;
+        flex-direction: column;
+        font-weight: 200;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media (max-width: 701px) {
+    .cabecalho {
+        justify-content: space-evenly;
+    }
+}
